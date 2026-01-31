@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #ffe6f0;
+            color: #ff1a75;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        button {
+            background-color: #ff4da6;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff1a75;
+            transform: scale(1.1);
+        }
+
+        #heart {
+            font-size: 5em;
+            display: none;
+            animation: beat 1s infinite;
+            margin-top: 30px;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi Breana! Will You Be My Valentine? </h1>
+    <p>Click the button, Yes ra walay "NO" bahala ka dira</p>
+    <button onclick="valentineResponse()">Yes!</button>
+
+    <div id="heart">❤️</div>
+
+    <script>
+        function valentineResponse() {
+            // Show the heart emoji
+            const heart = document.getElementById('heart');
+            heart.style.display = 'block';
+
+            // Show a message
+            alert("Yay! I love youu my babyy");
+
+            // Change button text
+            const button = document.querySelector('button');
+            button.textContent = "Muahhhh! 💕";
+        }
+    </script>
+</body>
+</html>
